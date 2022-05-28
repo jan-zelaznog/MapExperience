@@ -13,6 +13,10 @@
 		3D8FA87A2842873D00A4B797 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D8FA8782842873D00A4B797 /* Main.storyboard */; };
 		3D8FA87C2842873F00A4B797 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D8FA87B2842873F00A4B797 /* Assets.xcassets */; };
 		3D8FA87F2842873F00A4B797 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D8FA87D2842873F00A4B797 /* LaunchScreen.storyboard */; };
+		3D8FA88728428A3900A4B797 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FA88628428A3900A4B797 /* CustomTabBarController.swift */; };
+		3D8FA88A28428E0500A4B797 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D8FA88928428E0500A4B797 /* CoreLocation.framework */; };
+		3D8FA88C28428E3300A4B797 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D8FA88B28428E3300A4B797 /* MapKit.framework */; };
+		3D8FA88E28429D8C00A4B797 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8FA88D28429D8C00A4B797 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		3D8FA87B2842873F00A4B797 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D8FA87E2842873F00A4B797 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3D8FA8802842873F00A4B797 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D8FA88628428A3900A4B797 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		3D8FA88928428E0500A4B797 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3D8FA88B28428E3300A4B797 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3D8FA88D28429D8C00A4B797 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D8FA88C28428E3300A4B797 /* MapKit.framework in Frameworks */,
+				3D8FA88A28428E0500A4B797 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +52,7 @@
 			children = (
 				3D8FA8712842873D00A4B797 /* MapExperience */,
 				3D8FA8702842873D00A4B797 /* Products */,
+				3D8FA88828428E0500A4B797 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +74,19 @@
 				3D8FA87B2842873F00A4B797 /* Assets.xcassets */,
 				3D8FA87D2842873F00A4B797 /* LaunchScreen.storyboard */,
 				3D8FA8802842873F00A4B797 /* Info.plist */,
+				3D8FA88628428A3900A4B797 /* CustomTabBarController.swift */,
+				3D8FA88D28429D8C00A4B797 /* MapViewController.swift */,
 			);
 			path = MapExperience;
+			sourceTree = "<group>";
+		};
+		3D8FA88828428E0500A4B797 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D8FA88B28428E3300A4B797 /* MapKit.framework */,
+				3D8FA88928428E0500A4B797 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +162,8 @@
 			files = (
 				3D8FA8772842873D00A4B797 /* ViewController.swift in Sources */,
 				3D8FA8732842873D00A4B797 /* AppDelegate.swift in Sources */,
+				3D8FA88728428A3900A4B797 /* CustomTabBarController.swift in Sources */,
+				3D8FA88E28429D8C00A4B797 /* MapViewController.swift in Sources */,
 				3D8FA8752842873D00A4B797 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,19 +311,23 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = E9KS5E39JS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MapExperience/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Para espiar tu ubición";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Para espiar tu ubición";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = mx.funam.dti.MapExperience;
+				PRODUCT_BUNDLE_IDENTIFIER = com.janzelaznog.ddam.MapExperience;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -314,19 +342,23 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = E9KS5E39JS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MapExperience/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Para espiar tu ubición";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Para espiar tu ubición";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = mx.funam.dti.MapExperience;
+				PRODUCT_BUNDLE_IDENTIFIER = com.janzelaznog.ddam.MapExperience;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

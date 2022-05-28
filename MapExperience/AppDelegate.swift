@@ -6,11 +6,12 @@
 //
 
 import UIKit
+import CoreLocation
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var miUbicacion = CLLocationCoordinate2D(latitude: 19.331912, longitude: -99.192177)
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
